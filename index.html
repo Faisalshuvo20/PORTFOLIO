@@ -1,0 +1,515 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Faisal Shuva — Cybersecurity project portfolio, practical labs, CTF learning and development projects.">
+  <title>Faisal Shuva | Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Full website scanner -->
+  <div class="scanner-overlay" aria-hidden="true">
+    <div class="scanner-line"></div>
+  </div>
+
+  <div class="background-grid" aria-hidden="true"></div>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="container navbar" aria-label="Main navigation">
+      <a href="#home" class="logo">
+        <span class="logo-icon">FS</span>
+        FAISAL <span>SHUVA</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-controls="navMenu"
+        aria-expanded="false">☰</button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#learning">Learning</a>
+        <a href="#milestones">Milestones</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section id="home" class="hero container">
+      <div class="hero-content">
+        <p class="eyebrow">
+          <span class="live-dot"></span>
+          CYBERSECURITY PROJECT HUB
+        </p>
+
+        <h1>FAISAL <span>SHUVA</span></h1>
+
+        <h2>
+          Cybersecurity Enthusiast
+          <span class="separator">|</span>
+          
+        </h2>
+
+        <p class="hero-role">
+          Aspiring Security Analyst & Penetration Tester
+        </p>
+
+        <p class="hero-description">
+          Exploring offensive and defensive cybersecurity through
+          Linux labs, CTF challenges, web reconnaissance,
+          automation and practical software projects.
+          I believe in learning by building and documenting.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-primary"
+             href="https://github.com/Faisalshuvo20"
+             target="_blank" rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+
+          <a class="btn btn-outline"
+             href="https://www.linkedin.com/in/faisal-imran-shuva/"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn ↗
+          </a>
+
+          <a class="btn btn-outline" href="#projects">
+            Explore Projects ↓
+          </a>
+        </div>
+
+        <div class="hero-skills">
+          <span>⌘ Linux</span>
+          <span>◇ Ethical Hacking</span>
+          <span>◎ Security Analysis</span>
+          <span>↗ Continuous Learning</span>
+        </div>
+      </div>
+
+      <!-- Profile picture with scanner -->
+      <div class="hero-visual">
+        <div class="profile-frame">
+          <div class="profile-image-wrap">
+            <img
+              src="images/profile.jpg"
+              alt="Portrait of Faisal Shuva"
+              id="profileImage"
+            >
+            <div class="profile-placeholder" id="profilePlaceholder">
+              <span>FS</span>
+              <small>ADD PROFILE PHOTO</small>
+            </div>
+            <div class="profile-scan" aria-hidden="true"></div>
+            <div class="profile-grid" aria-hidden="true"></div>
+          </div>
+
+          <div class="frame-corner top-left"></div>
+          <div class="frame-corner top-right"></div>
+          <div class="frame-corner bottom-left"></div>
+          <div class="frame-corner bottom-right"></div>
+          <div class="frame-label">IDENTITY / FAISAL SHUVA</div>
+        </div>
+
+        <div class="scan-panel">
+          <div class="scan-heading">
+            <span class="live-dot"></span>
+            SYSTEM STATUS
+          </div>
+          <p><span>›</span> Identity: Faisal Shuva</p>
+          <p><span>›</span> Focus: Cybersecurity</p>
+          <p><span>›</span> Projects: 04</p>
+          <p><span>›</span> Status: Learning</p>
+          <div class="status-track">
+            <div class="status-progress"></div>
+          </div>
+          <small>LEARN / PRACTICE / DOCUMENT</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">01 / FEATURED WORK</p>
+          <h2>Projects <span>& Case Studies</span></h2>
+          <p>
+            A closer look at the problems I explored, the tools I used,
+            and what I learned through practical work.
+          </p>
+        </div>
+
+        <div class="project-filters" aria-label="Project filters">
+          <button class="filter-btn active" data-filter="all"
+            aria-pressed="true">All Projects</button>
+          <button class="filter-btn" data-filter="security"
+            aria-pressed="false">Security</button>
+          <button class="filter-btn" data-filter="development"
+            aria-pressed="false">Development</button>
+          <button class="filter-btn" data-filter="automation"
+            aria-pressed="false">Automation</button>
+        </div>
+
+        <div id="projectsGrid" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- About and Photo Gallery -->
+    <section id="about" class="section about-section">
+      <div class="container about-grid">
+
+        <div class="about-content">
+          <p class="eyebrow">02 / ABOUT ME</p>
+          <h2>My Cybersecurity <span>Journey</span></h2>
+
+          <p>
+            I'm a Computer Science and Engineering student with a
+            growing interest in ethical hacking, penetration testing,
+            security operations, and digital forensics.
+          </p>
+
+          <p>
+            I enjoy exploring cybersecurity through hands-on Linux
+            labs, CTF challenges, reconnaissance practice and
+            programming projects.
+          </p>
+
+          <p>
+            I'm building foundations in both Red Team and Blue Team
+            concepts. My focus is on understanding how systems work,
+            recognizing security risks and learning how to investigate
+            them responsibly.
+          </p>
+
+          <div class="terminal-quote">
+            <span>faisal@cyber:~$</span>
+            <p>"Learn. Practice. Document. Improve."</p>
+            <span>faisal@cyber:~$ <i class="cursor">_</i></span>
+          </div>
+        </div>
+
+        <div id="gallery" class="gallery-content">
+          <p class="eyebrow">03 / PHOTO GALLERY</p>
+          <h2>Moments From <span>My Journey</span></h2>
+          <p class="gallery-intro">
+            Personal moments, coding sessions, lab practice,
+            and project progress.
+          </p>
+
+          <div class="gallery-grid" id="galleryGrid"></div>
+
+          <button class="btn btn-outline gallery-more"
+            id="viewAllGallery" type="button">
+            View Full Gallery ↗
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills-strip">
+      <div class="container">
+        <div class="skills-strip-grid">
+          <div>◇ <span>Ethical Hacking</span></div>
+          <div>◎ <span>Penetration Testing</span></div>
+          <div>▣ <span>Security Operations</span></div>
+          <div>◉ <span>Web Security</span></div>
+          <div>⌘ <span>Network Security</span></div>
+          <div>✧ <span>Digital Forensics</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practical Learning -->
+    <section id="learning" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">04 / HANDS-ON EXPERIENCE</p>
+          <h2>Practical <span>Learning</span></h2>
+          <p>
+            Practical learning is separate from certifications.
+            My current work focuses on developing fundamentals
+            through exercises and experiments.
+          </p>
+        </div>
+
+        <div class="learning-grid">
+          <article class="info-card">
+            <div class="card-symbol">⌘</div>
+            <h3>Linux & CTF Labs</h3>
+            <p>
+              Linux commands, hidden files, permissions,
+              system information, services and troubleshooting.
+            </p>
+            <div class="card-meta">
+              <strong>Completed rooms:</strong>
+              <span>Count not provided</span>
+            </div>
+            <div class="card-meta">
+              <strong>Evidence:</strong>
+              <span>Write-ups and screenshots pending</span>
+            </div>
+          </article>
+
+          <article class="info-card">
+            <div class="card-symbol">◎</div>
+            <h3>Web Security</h3>
+            <p>
+              DNS concepts, subdomain discovery, web reconnaissance,
+              testing scope and responsible vulnerability research.
+            </p>
+            <div class="card-meta">
+              <strong>Platforms:</strong>
+              <span>Profile link not provided</span>
+            </div>
+            <div class="card-meta">
+              <strong>Evidence:</strong>
+              <span>Lab notes pending</span>
+            </div>
+          </article>
+
+          <article class="info-card">
+            <div class="card-symbol">≋</div>
+            <h3>Network Analysis</h3>
+            <p>
+              TCP/IP, DNS, HTTP/HTTPS, Wireshark,
+              networking protocols and packet analysis fundamentals.
+            </p>
+            <div class="card-meta">
+              <strong>Tools:</strong>
+              <span>Wireshark, Linux</span>
+            </div>
+            <div class="card-meta">
+              <strong>Evidence:</strong>
+              <span>Analysis notes pending</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="learning-note">
+          <strong>TryHackMe / Learning Profiles:</strong>
+          No verified TryHackMe profile URL or completed room count
+          has been provided yet. Add those details when available.
+        </div>
+      </div>
+    </section>
+
+    <!-- Milestones -->
+    <section id="milestones" class="section alt-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">05 / PROGRESS</p>
+          <h2>Milestones <span>& Community</span></h2>
+        </div>
+
+        <div class="milestones-grid">
+          <article class="info-card">
+            <div class="card-symbol">◇</div>
+            <h3>CTF Competitions</h3>
+            <p>
+              Practicing CTF-style challenges involving Linux,
+              system navigation and problem-solving.
+            </p>
+            <div class="card-meta">
+              <strong>Competition:</strong>
+              <span>No named event provided</span>
+            </div>
+            <div class="card-meta">
+              <strong>Placement:</strong>
+              <span>Not documented</span>
+            </div>
+            <div class="card-meta">
+              <strong>Learning:</strong>
+              <span>Linux and analytical problem-solving</span>
+            </div>
+            <div class="card-meta">
+              <strong>Evidence:</strong>
+              <span>Pending</span>
+            </div>
+          </article>
+
+          <article class="info-card">
+            <div class="card-symbol">▤</div>
+            <h3>Certifications</h3>
+            <p>
+              Currently focusing on hands-on projects and building
+              practical cybersecurity foundations.
+            </p>
+            <div class="card-meta">
+              <strong>Completed:</strong>
+              <span>No professional certificates listed</span>
+            </div>
+            <div class="card-meta">
+              <strong>Certificate URL:</strong>
+              <span>Placeholder</span>
+            </div>
+          </article>
+
+          <article class="info-card">
+            <div class="card-symbol">✧</div>
+            <h3>Achievements & Community</h3>
+            <p>
+              Interested in collaboration, learning communities,
+              technical discussions and knowledge sharing.
+            </p>
+            <div class="card-meta">
+              <strong>Verified contributions:</strong>
+              <span>Not documented yet</span>
+            </div>
+            <div class="card-meta">
+              <strong>Future evidence:</strong>
+              <span>Talks, volunteering, mentoring or awards</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">06 / FUTURE PLANS</p>
+          <h2>Project <span>Roadmap</span></h2>
+          <p>
+            These are planned learning goals, not completed projects.
+          </p>
+        </div>
+
+        <div class="roadmap-grid">
+          <article class="roadmap-card">
+            <span>01 / PLANNED</span>
+            <h3>Phishing Email Investigation</h3>
+            <p>
+              Investigate simulated phishing emails, headers
+              and indicators of compromise.
+            </p>
+          </article>
+
+          <article class="roadmap-card">
+            <span>02 / PLANNED</span>
+            <h3>Mini SOC Monitoring Lab</h3>
+            <p>
+              Explore security logs, monitoring and basic
+              threat detection in a controlled lab.
+            </p>
+          </article>
+
+          <article class="roadmap-card">
+            <span>03 / PLANNED</span>
+            <h3>Python Security Automation</h3>
+            <p>
+              Build a utility for processing security-related
+              information and repetitive analysis tasks.
+            </p>
+          </article>
+
+          <article class="roadmap-card">
+            <span>04 / PLANNED</span>
+            <h3>Web Security Write-ups</h3>
+            <p>
+              Document lessons and methodologies from
+              authorized web security practice.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact-section">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">07 / CONNECT</p>
+          <h2>Let's <span>Connect.</span></h2>
+          <p>
+            Interested in cybersecurity projects, security learning,
+            research discussions and professional collaboration.
+          </p>
+        </div>
+
+        <div class="contact-links">
+          <a href="https://github.com/Faisalshuvo20"
+             target="_blank" rel="noopener noreferrer">
+            <div>
+              <strong>GitHub</strong>
+              <small>Explore my work</small>
+            </div>
+            <span>↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/faisal-imran-shuva/"
+             target="_blank" rel="noopener noreferrer">
+            <div>
+              <strong>LinkedIn</strong>
+              <small>Professional networking</small>
+            </div>
+            <span>↗</span>
+          </a>
+
+          <div class="email-placeholder">
+            <div>
+              <strong>Email</strong>
+              <small>foysalshuvo2020@gmail.com</small>
+            </div>
+            <span>—</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Faisal Shuva. All rights reserved.</p>
+      <p>Learn. Practice. Document. Improve.</p>
+      <a href="#home">Back to Top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Project detail modal -->
+  <dialog id="projectModal" class="modal">
+    <div class="modal-header">
+      <span class="eyebrow">PROJECT CASE STUDY</span>
+      <button class="modal-close" id="closeProject"
+        aria-label="Close project details">✕</button>
+    </div>
+    <div id="projectDetails"></div>
+  </dialog>
+
+  <!-- Gallery lightbox -->
+  <dialog id="galleryModal" class="gallery-modal">
+    <div class="gallery-modal-top">
+      <span>PHOTO GALLERY</span>
+      <button id="closeGallery" class="modal-close"
+        aria-label="Close gallery">✕</button>
+    </div>
+    <div class="gallery-modal-content">
+      <img id="galleryModalImage" alt="">
+      <h3 id="galleryModalTitle"></h3>
+      <p id="galleryModalCaption"></p>
+      <div class="gallery-controls">
+        <button id="previousPhoto" type="button">← Previous</button>
+        <span id="galleryCounter"></span>
+        <button id="nextPhoto" type="button">Next →</button>
+      </div>
+    </div>
+  </dialog>
+
+</body>
+</html>
