@@ -1358,3 +1358,20 @@ footer {
     display: none;
   }
 }
+/* Navbar Profile Picture */
+
+.logo-photo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #00e5ff;
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.4);
+    transition: 0.3s ease;
+}
+
+.logo-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00e5ff;
+}
